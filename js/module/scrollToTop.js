@@ -1,4 +1,4 @@
-const scrollToTop = () => {
+export const scrollToTop = () => {
    const topBtn = document.getElementById("scrollToTopButton")
 
    topBtn.addEventListener("click", (e) => {
@@ -11,5 +11,3 @@ const scrollToTop = () => {
       })
    })
 }
-
-scrollToTop()

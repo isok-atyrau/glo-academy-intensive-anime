@@ -1,6 +1,6 @@
-const mainData = () => {
-   const API_URL = "https://test-abec8-default-rtdb.firebaseio.com/anime.json"
+import { API_URL } from "./const.js"
 
+export const mainData = () => {
    const renderTopAnime = (array) => {
       const wrapper = document.querySelector(".filter__gallery")
 
@@ -46,5 +46,3 @@ const mainData = () => {
          alert(`Произошла ошибка, код статуса ${error.message}`)
       })
 }
-
-mainData()

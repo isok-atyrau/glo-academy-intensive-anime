@@ -1,4 +1,4 @@
-const preloader = () => {
+export const preloader = () => {
    const preloder = document.querySelector(".preloder")
 
    preloder.classList.add("active")
@@ -7,5 +7,3 @@ const preloader = () => {
       preloder.classList.remove("active")
    }, 500)
 }
-
-preloader()
