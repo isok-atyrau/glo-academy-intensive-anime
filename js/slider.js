@@ -1,4 +1,4 @@
-export const slider = () => {
+ const slider = () => {
    const swiper = new Swiper(".swiper", {
       effect: "fade",
       speed: 1000,
@@ -11,3 +11,5 @@ export const slider = () => {
       },
    })
 }
+
+slider()

@@ -1,6 +1,4 @@
-import { API_URL } from "./const.js"
-
-export const modal = () => {
+const modal = () => {
    const modal = document.querySelector(".search-model")
    const modalBtn = document.querySelector(".icon_search")
    const modalClose = modal.querySelector(".search-close-switch")
@@ -21,7 +19,7 @@ export const modal = () => {
    }
 
    const searchFunc = (searchStr) => {
-      fetch(API_URL)
+      fetch("https://test-abec8-default-rtdb.firebaseio.com/anime.json")
          .then((responce) => {
             if (responce.status === 200) {
                return responce.json()
@@ -63,3 +61,6 @@ export const modal = () => {
       searchFunc(e.target.value)
    })
 }
+
+
+modal()
