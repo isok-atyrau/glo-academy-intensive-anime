@@ -22,7 +22,7 @@ const mainData = () => {
    }
 
    const renderAnimeList = (array, ganres) => {
-      console.log(ganres)
+      // console.log(ganres)
    }
 
    fetch(API_URL)
