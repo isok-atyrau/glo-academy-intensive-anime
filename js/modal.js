@@ -8,6 +8,20 @@ const modal = () => {
    wrapper.style.maxWidth = "500px"
    wrapper.style.width = "100%"
 
+   const debounce = (func, ms = 500) => {
+      let timer
+      return (...args) => {
+         clearTimeout(timer)
+         timer = setTimeout(() => {
+            func.apply(this, args)
+         }, ms)
+      }
+   }
+
+   const searchDebounce = debounce((searchStr) => {
+      searchFunc(searchStr)
+   }, 800)
+
    const renderFunc = (items) => {
       wrapper.innerHTML = ""
       items.forEach((item) => {
@@ -58,9 +72,8 @@ const modal = () => {
    })
 
    modalSearch.addEventListener("input", (e) => {
-      searchFunc(e.target.value)
+      searchDebounce(e.target.value)
    })
 }
-
 
 modal()

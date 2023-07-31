@@ -5,7 +5,6 @@ const mainData = () => {
       const dropdown = document.querySelector(".header__menu .dropdown")
 
       ganres.forEach((ganre) => {
-         console.log(ganre)
          dropdown.insertAdjacentHTML(
             "beforeend",
             `<li><a href="./categories.html?ganre=${ganre}">${ganre}</a></li>`
