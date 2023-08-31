@@ -94,7 +94,7 @@ const categoriesData = () => {
       }, 500)
    }
 
-   fetch("https://test-abec8-default-rtdb.firebaseio.com/anime.json")
+   fetch("https://anime-edd22-default-rtdb.firebaseio.com/anime.json")
       .then((responce) => {
          if (responce.status === 200) {
             return responce.json()
